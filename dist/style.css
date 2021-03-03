@@ -1,0 +1,225 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap");
+*,
+*::after,
+*::before {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+  font-size: 140%;
+  font-weight: 300;
+  line-height: 1.4;
+  color: #2e2a44;
+}
+
+@media (min-width: 980px) {
+  body {
+    font-size: 171%;
+  }
+}
+
+.slide {
+  padding: 1rem;
+  background-image: url("/images/pattern-curve.svg"), url("/images/pattern-bg.svg");
+  background-repeat: no-repeat;
+  background-size: 88%;
+  background-position: -15% 102%, 50% 5%;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (min-width: 980px) {
+  .slide {
+    padding: 12rem 18rem;
+    background-size: 42%, 38%;
+    background-position: 0% 100%, 76% 45%;
+  }
+}
+
+.slide__wrap {
+  display: none;
+  width: 100%;
+  height: 100%;
+  max-width: 640px;
+}
+
+@media (min-width: 980px) {
+  .slide__wrap {
+    max-width: 1280px;
+  }
+}
+
+.slide__image {
+  position: relative;
+  padding: 2rem;
+  margin: 1rem 0 1.5rem;
+  text-align: center;
+  min-width: 400px;
+}
+
+.slide__image > img {
+  width: 88%;
+  border-radius: 5px;
+  -webkit-box-shadow: 0px 10px 30px rgba(105, 82, 188, 0.3);
+          box-shadow: 0px 10px 30px rgba(105, 82, 188, 0.3);
+}
+
+@media (min-width: 980px) {
+  .slide__image > img {
+    position: relative;
+    left: -2rem;
+  }
+}
+
+@media (min-width: 980px) {
+  .slide__image {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    margin-top: 0rem;
+    padding: 0;
+  }
+}
+
+.slide__btn {
+  position: absolute;
+  background: #fff;
+  border-radius: 5rem;
+  padding: 0.8rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 4.8rem;
+  -webkit-box-shadow: 0px 10px 20px rgba(105, 82, 188, 0.2);
+          box-shadow: 0px 10px 20px rgba(105, 82, 188, 0.2);
+  bottom: 1rem;
+  left: 10rem;
+}
+
+@media (min-width: 980px) {
+  .slide__btn {
+    bottom: 2rem;
+    left: 3em;
+    position: relative;
+  }
+}
+
+.slide__btn:hover {
+  -webkit-box-shadow: 0px 10px 20px rgba(105, 82, 188, 0.5);
+          box-shadow: 0px 10px 20px rgba(105, 82, 188, 0.5);
+  margin-left: .6rem;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.slide__btn img {
+  cursor: pointer;
+  width: 20%;
+}
+
+.slide__text {
+  background: url("/images/pattern-quotes.svg") no-repeat;
+  background-position: 50% 0%;
+  background-size: 17%;
+  padding-top: 12px;
+  text-align: center;
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content;
+}
+
+@media (min-width: 980px) {
+  .slide__text {
+    text-align: left;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    z-index: 1;
+    background-position: 22% 2%;
+    background-size: 18%;
+    position: relative;
+    left: 4.4rem;
+    top: 4rem;
+  }
+}
+
+.slide__text .spoke {
+  padding: 1rem;
+  margin: 0;
+}
+
+@media (min-width: 980px) {
+  .slide__text .spoke {
+    padding-top: 3rem;
+  }
+}
+
+.slide__text .author {
+  padding: 1rem;
+  font-size: 1.2rem;
+}
+
+@media (min-width: 980px) {
+  .slide__text .author {
+    font-size: 75%;
+  }
+}
+
+.slide__text .author .name {
+  display: block;
+  font-weight: 900;
+}
+
+@media (min-width: 980px) {
+  .slide__text .author .name {
+    display: inline-block;
+  }
+}
+
+.slide__text .author .job {
+  font-weight: 500;
+  color: #babacf;
+}
+
+.fade {
+  -webkit-animation-name: fade;
+          animation-name: fade;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
